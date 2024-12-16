@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Admission Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Home Page -->
+    <div id="home-page" class="container">
+      <nav>
+        <a href="#home-page">Home</a>
+        <a href="#form-page">Admission Form</a>
+        <a href="#record-page">Records</a>
+      </nav>
+      <h1>Welcome to Student Admission Portal</h1>
+      <p>
+        This portal helps in managing student admissions efficiently. Navigate
+        to the form to submit details or view records.
+      </p>
+    </div>
+
+    <!-- Form Page -->
+    <div id="form-page" class="container" style="display: none">
+      <nav>
+        <a href="#home-page">Home</a>
+        <a href="#form-page">Admission Form</a>
+        <a href="#record-page">Records</a>
+      </nav>
+      <h1>Student Admission Form</h1>
+      <form id="admission-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="father-name">Father's Name</label>
+          <input type="text" id="father-name" required />
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" required />
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" id="address" required />
+        </div>
+        <div class="form-group">
+          <label for="course">Study Course</label>
+          <select id="course">
+            <option value="Science">Science</option>
+            <option value="Arts">Arts</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="marks">Obtained Marks</label>
+          <input type="number" id="marks" required />
+        </div>
+        <div class="form-group">
+          <label for="year">Passing Year</label>
+          <input type="number" id="year" required />
+        </div>
+        <div class="form-group">
+          <label for="subject">Apply for</label>
+          <select id="subject">
+            <option value="Computer Science">Computer Science</option>
+            <option value="Pre-Medical">Pre-Medical</option>
+            <option value="Pre-Engineering">Pre-Engineering</option>
+            <option value="Arts">Arts</option>
+            <option value="Commerce">Commerce</option>
+          </select>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Record Page -->
+    <div id="record-page" class="container" style="display: none">
+      <nav>
+        <a href="#home-page">Home</a>
+        <a href="#form-page">Admission Form</a>
+        <a href="#record-page">Records</a>
+      </nav>
+      <h1>Student Records</h1>
+      <input
+        type="text"
+        id="search"
+        class="search-bar"
+        placeholder="Search..."
+      />
+      <table id="records-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Father's Name</th>
+            <th>DOB</th>
+            <th>Address</th>
+            <th>Course</th>
+            <th>Marks</th>
+            <th>Year</th>
+            <th>Subject</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamic Rows -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
